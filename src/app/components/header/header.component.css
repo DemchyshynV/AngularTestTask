@@ -1,0 +1,11 @@
+div{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: snow;
+  background-color: #424242;
+}
+h1{
+  margin-left: 20px;
+  font-family: "Droid Sans Fallback";
+}

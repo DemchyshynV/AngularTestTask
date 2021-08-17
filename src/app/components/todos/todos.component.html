@@ -1,0 +1,5 @@
+<button class="btn" mat-raised-button color="primary" (click)="showHideForm()">Add todo</button>
+<app-form *ngIf="showForm" (saveEmmit)="saveEmmit()"></app-form>
+<mat-accordion>
+  <app-todo *ngFor="let todo of todos" [todo]="todo" (emitId)="delete($event)"></app-todo>
+</mat-accordion>

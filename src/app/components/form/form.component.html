@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <mat-form-field class="example-full-width" appearance="outline" color="accent">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput formControlName="name" autofocus>
+    <mat-error *ngIf="form.controls.name.hasError('required')">
+      Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline" color="accent">
+    <mat-label>Description</mat-label>
+    <input type="text" matInput formControlName="description">
+    <mat-error *ngIf="form.controls.description.hasError('required')">
+      Description is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <div class="btn">
+    <button *ngIf="todo?.id" mat-raised-button color="primary" (click)="cancel()">Cancel</button>
+    <button *ngIf="delete" mat-raised-button color="primary" (click)="deleteItem()">Delete</button>
+    <button *ngIf="!todo?.id" mat-raised-button color="primary" [disabled]="form.invalid" (click)="save()">Save</button>
+    <button *ngIf="todo?.id" mat-raised-button color="primary" [disabled]="form.invalid" (click)="saveEdited()">Save</button>
+  </div>
+</form>

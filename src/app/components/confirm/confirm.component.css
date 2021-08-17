@@ -1,0 +1,11 @@
+button{
+  margin: 5px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1{
+  margin: 10px auto;
+}
